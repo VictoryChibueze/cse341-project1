@@ -4,7 +4,7 @@
   "description": "My first project",
   "main": "server.js",
   "scripts": {
-    "run:dev": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "author": "Victory Chibueze",
   "license": "ISC",
