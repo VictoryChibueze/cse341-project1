@@ -3,7 +3,7 @@ const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res) => {
   try {
-    const result = await mongodb.getData().db().collection("users").find();
+    const result = await mongodb.getData().db().collection("contacts").find();
     result.toArray().then((users) => {
       res.setHeader("Content-Type", "application/json");
       res.status(200).json(users);
@@ -20,7 +20,7 @@ const getSingle = async (req, res) => {
     const result = await mongodb
       .getData()
       .db()
-      .collection("users")
+      .collection("contacts")
       .find({ _id: userId });
     result.toArray().then((users) => {
       res.setHeader("Content-Type", "application/json");
