@@ -4,9 +4,23 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 const mongodb = require("./DB/database");
 const indexRoute = require("./routes/index");
+const cors = require("cors");
 
 /* **********MIDDLEWARES************* */
 app.use(bodyParser.json());
+app.use("/", (req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Header",
+    "Origin, X-Requested-With, Content-Type, Accept, Z-Key"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  );
+  next();
+});
+app.use(cors());
 app.use("/", indexRoute);
 
 console.log(process.env.PORT);
