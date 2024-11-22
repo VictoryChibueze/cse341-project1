@@ -1,0 +1,70 @@
+// LOCALHOST 
+
+### Get all contacts 
+GET http://localhost:8080/contacts
+
+### Get contact by id 
+GET http://localhost:8080/contacts/6740c1c4d44242648f7db190
+
+### Create contact 
+POST http://localhost:8080/contacts 
+content-type: application/json
+
+{
+"firstName":"Ashley", 
+"lastName":"Weaver", 
+"email":"aWeaver@test.com", 
+"favoriteColor":"Brown", 
+"birthday":"06/19/2000"
+}
+
+### Update contact 
+PUT http://localhost:8080/contacts/6740c1c4d44242648f7db190
+content-type: application/json
+
+{
+"firstName":"Sarah",
+ "lastName":"Birch", 
+ "email":"test@gmail.com", 
+ "favoriteColor":"Green", 
+ "birthday":"12/12/20"
+} 
+### DELETE contact 
+DELETE http://localhost:8080/contacts/6740c1c4d44242648f7db190
+
+
+// PRODUCTION Deploy
+
+### Get all contacts 
+GET https://cse341-project1-4pf5.onrender.com/contacts
+
+### Get contact by id 
+GET https://cse341-project1-4pf5.onrender.com/contacts/6740c1c4d44242648f7db190
+
+### Create contact 
+POST https://cse341-project1-4pf5.onrender.com/contacts 
+content-type: application/json
+
+{
+"firstName":"Ambless", 
+"lastName":"Weaver",
+"email":"aWeaver@test.com", 
+"favoriteColor":"Brown", 
+"birthday":"06/19/2000"
+}
+
+### Update contact 
+PUT https://cse341-project1-4pf5.onrender.com/contacts/6740c1c4d44242648f7db190 
+content-type: application/json
+
+{
+"firstName":"Sarah", 
+"lastName":"Birch", 
+"email":"sarahB@gmail.com", 
+"favoriteColor":"Yellow", 
+"birthday":"06/12/2005"
+}
+
+### DELETE contact 
+DELETE https://cse341-project1-4pf5.onrender.com/contacts/6740c1c4d44242648f7db190 
+
